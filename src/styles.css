@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red{
+    color:rgb(227, 94, 107)
+}
+.v-middle{
+    vertical-align: middle;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 20px;
+    margin-right: 15px;
+}
+.msgSucess{
+    background-color: #28a745;
+    color:#fff
+}
+
+.msgError{
+    background-color:rgb(227, 94, 107);
+    color:#fff
+}

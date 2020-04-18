@@ -1,0 +1,21 @@
+.container{
+height: 84%;  
+}
+
+.sidenav{
+    background-color:beige;
+    width: 200px;
+}
+
+.sidenav a {
+    color:rgba(red, green, blue, alpha);
+}
+
+.sidenav i {
+    padding-right: 20px;    
+}
+
+.content{
+    padding: 16px;
+    background-color:#FFF;
+}

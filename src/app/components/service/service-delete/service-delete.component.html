@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-title>
+    Deletar Serviço
+  </mat-card-title>
+  <form class="form"> 
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="service.name" name="name" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Preço(R$)" [(ngModel)]="service.price" name="price" required disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Produto" [(ngModel)]="service.quantidade" name="quantidade" disabled disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="time" placeholder="horário" [(ngModel)]="service.time" name="horario" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="data" placeholder="Data" [(ngModel)]="service.date" name="data" disabled>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="deleteService()" color="warn">
+    Deletar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()" >
+    Cancelar
+  </button>
+</mat-card>
+
