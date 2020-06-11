@@ -6,6 +6,7 @@ export interface Service{
     price:number;
     time:string;
     date:string;
+    quantidade:number;
     //product:Product;
 
 }

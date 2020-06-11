@@ -16,6 +16,7 @@ export class ServiceUpdateComponent implements OnInit {
       price: 0 ,
       date:'',
       time:'',
+      quantidade:0
       
   }
 

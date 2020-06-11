@@ -15,6 +15,7 @@ export class ServiceDeleteComponent implements OnInit {
     price: 0 ,
     date:'',
     time:'',
+    quantidade:0
     
 }
 

@@ -17,6 +17,7 @@ export class ServiceCreateComponent implements OnInit {
     price:null,
     time:'',
     date:'',
+    quantidade:0
     }
 
   constructor(
