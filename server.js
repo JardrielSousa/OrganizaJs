@@ -2,16 +2,11 @@ const express = require('express');
 const path = require('path');
 const nomeApp = process.env.fronEnd;
 const app = express();
-
-app.use(function(req, res, next) {
-    if (req.url === '/index.html') {
-        res.redirect(301, 'https://' + req.hostname);
-      }   
-     next()
-  })
-  app.get("/", function(req, res) {
-    console.log("requisição")
-    res.send("/")
-  })
+ 
+app.use(express.static(`${__dirname}/dist/frontEnd`));
+ 
+app.get('/*', (req, res) => {
+res.sendFile(path.join(`${__dirname}/dist/frontEnd/index.html`));
+});
  
 app.listen(process.env.PORT || 8081);
