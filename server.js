@@ -4,13 +4,14 @@ const nomeApp = process.env.fronEnd;
 const app = express();
 
 app.use(function(req, res, next) {
-    console.log("middleware 1")
-    next()
+    if (req.url === '/index.html') {
+        res.redirect(301, 'https://' + req.hostname);
+      }   
+     next()
   })
-  
   app.get("/", function(req, res) {
     console.log("requisição")
-    res.send("Requisição!")
+    res.send("/")
   })
  
 app.listen(process.env.PORT || 8081);
