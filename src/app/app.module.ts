@@ -1,7 +1,8 @@
+import {MatIconModule} from '@angular/material/icon';
 import { ServiceCrudComponent } from './../app/views/service-crud/service-crud.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-
+import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -65,6 +66,8 @@ registerLocaleData(localePt);
     MatInputModule,
     MatFormFieldModule,
     MatTableModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [{
     provide:LOCALE_ID,

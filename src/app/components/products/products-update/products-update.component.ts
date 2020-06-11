@@ -27,10 +27,15 @@ product : Product = {
     })
   }
   updateProduct(){
-    this.productsService.update(this.product).subscribe(()=>{
+    if(this.product.price>0 && this.product.quantidade>0)
+      this.productsService.update(this.product).subscribe(()=>{
       this.productsService.verMsg('Produto foi alterado com sucesso!!')
-      this.router.navigate(['/products'])
-    })
+      this.router.navigate(['/products']);
+    });
+    else if(this.product.price>0)
+      this.productsService.verMsg('seu produto precisa de um preço!!!',true);
+    else if(this.product.quantidade>0)
+      this.productsService.verMsg('precisa ter pelo menos um produto no estoque!!!',true);
   }
   cancel(){
     this.router.navigate(['/products'])
