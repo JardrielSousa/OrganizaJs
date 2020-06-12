@@ -11,9 +11,9 @@ import { Product } from './../product.model';
 export class ProductsUpdateComponent implements OnInit {
 
 product : Product = {
-  name : '',
-  price : null,
-  quantidade:null
+  nome : '',
+  valor : 0.0,
+  quantidade:0
 }
   constructor(
     private productsService:ProductsService,
@@ -27,12 +27,13 @@ product : Product = {
     })
   }
   updateProduct(){
-    if(this.product.price>0 && this.product.quantidade>0)
+    console.log(this.product)
+    if(this.product.valor>0 && this.product.quantidade>0)
       this.productsService.update(this.product).subscribe(()=>{
       this.productsService.verMsg('Produto foi alterado com sucesso!!')
       this.router.navigate(['/products']);
     });
-    else if(this.product.price>0)
+    else if(this.product.valor>0)
       this.productsService.verMsg('seu produto precisa de um preço!!!',true);
     else if(this.product.quantidade>0)
       this.productsService.verMsg('precisa ter pelo menos um produto no estoque!!!',true);

@@ -10,9 +10,9 @@ import { Product } from '../product.model';
 })
 export class ProductsDeleteComponent implements OnInit {
   product : Product = {
-    name : '',
-    price : null,
-    quantidade:null
+    nome : '',
+    valor: 0.0,
+    quantidade:0
   }
   constructor(
     private productsService:ProductsService,

@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class ProductsCreateComponent implements OnInit {
 
   product : Product = {
-    name : '',
-    price : null,
+    nome : '',
+    valor : 0.0,
     quantidade:1
   }
 
@@ -24,12 +24,12 @@ export class ProductsCreateComponent implements OnInit {
   }
 
   createProduct():void{
-    if(this.product.quantidade>0 && this.product.price>0)
+    if(this.product.quantidade>0 && this.product.valor>0)
       this.productsService.create(this.product).subscribe(()=>{
         this.productsService.verMsg('produto criado!!!');
         this.router.navigate(['/products']);
       });
-    else if(this.product.price>0)
+    else if(this.product.valor>0)
       this.productsService.verMsg('seu produto precisa de um preço!!!',true);
     else if(this.product.quantidade>0)
       this.productsService.verMsg('precisa ter pelo menos um produto no estoque!!!',true);

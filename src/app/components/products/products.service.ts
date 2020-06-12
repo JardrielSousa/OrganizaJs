@@ -12,7 +12,8 @@ export class ProductsService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = "http://localhost:3101/produtos"
+  baseUrl = "https://organizadbapi.herokuapp.com/v1/produto"
+  
 
   verMsg(msg:string,isError:boolean=false):void{
     console.log(msg)
