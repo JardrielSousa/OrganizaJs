@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { map, catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -12,7 +13,7 @@ export class ProductsService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = "https://organizadbapi.herokuapp.com/v1/produto"
+  baseUrl = `${environment.url}produtos`
   
 
   verMsg(msg:string,isError:boolean=false):void{

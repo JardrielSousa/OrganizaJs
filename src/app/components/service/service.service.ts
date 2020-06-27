@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Service } from './service.model';
-
+import {environment} from './../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ServiceService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = "http://localhost:3101/service"
+  baseUrl = `${environment.url}service`
 
   verMsg(msg:string):void{
     console.log(msg)

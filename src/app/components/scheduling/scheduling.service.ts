@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, EMPTY } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -12,7 +13,7 @@ export class SchedulingService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = "http://localhost:3101/agendamento";
+  baseUrl = `${environment.url}agendamento`;
   
 
   verMsg(msg:string,isError:boolean=false):void{
