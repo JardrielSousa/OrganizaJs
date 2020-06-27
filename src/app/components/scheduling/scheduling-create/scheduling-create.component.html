@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>
+    Novo Agendamento
+  </mat-card-title>
+  <form class="form"> 
+    <mat-form-field>
+      <input matInput type="date" placeholder="Date" [(ngModel)]="scheduling.date" name="date" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="time" placeholder="time" [(ngModel)]="scheduling.time" name="time" required>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="createScheduling()" color="primary">
+    Salvar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()" >
+    Cancelar
+  </button>
+</mat-card>
+

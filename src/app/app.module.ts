@@ -28,6 +28,11 @@ import { ServiceCreateComponent } from './components/service/service-create/serv
 import { ServiceReadComponent } from './components/service/service-read/service-read.component';
 import { ServiceUpdateComponent } from './components/service/service-update/service-update.component';
 import { ServiceDeleteComponent } from './components/service/service-delete/service-delete.component';
+import { SchedulingCrudComponent } from './views/scheduling-crud/scheduling-crud.component';
+import { SchedulingReadComponent } from './components/scheduling/scheduling-read/scheduling-read.component';
+import { SchedulingUpdateComponent } from './components/scheduling/scheduling-update/scheduling-update.component';
+import { SchedulingCreateComponent } from './components/scheduling/scheduling-create/scheduling-create.component';
+import { SchedulingDeleteComponent } from './components/scheduling/scheduling-delete/scheduling-delete.component';
 
 
 
@@ -49,6 +54,11 @@ registerLocaleData(localePt);
     ServiceUpdateComponent,
     ServiceCrudComponent,
     ServiceDeleteComponent,
+    SchedulingCrudComponent,
+    SchedulingReadComponent,
+    SchedulingUpdateComponent,
+    SchedulingCreateComponent,
+    SchedulingDeleteComponent,
     
   ],
   imports: [

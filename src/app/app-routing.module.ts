@@ -1,3 +1,7 @@
+import { SchedulingDeleteComponent } from './components/scheduling/scheduling-delete/scheduling-delete.component';
+import { SchedulingUpdateComponent } from './components/scheduling/scheduling-update/scheduling-update.component';
+import { SchedulingCreateComponent } from './components/scheduling/scheduling-create/scheduling-create.component';
+import { SchedulingCrudComponent } from './views/scheduling-crud/scheduling-crud.component';
 import { ServiceUpdateComponent } from './components/service/service-update/service-update.component';
 import { ServiceDeleteComponent } from './components/service/service-delete/service-delete.component';
 import { ServiceReadComponent } from './components/service/service-read/service-read.component';
@@ -40,6 +44,18 @@ const routes: Routes = [
   },{
     path:"service/delete/:id",
     component:ServiceDeleteComponent
+  },{
+    path:"scheduling",
+    component:SchedulingCrudComponent
+  },{
+    path:"scheduling/create",
+    component:SchedulingCreateComponent
+  },{
+    path:"scheduling/update/:id",
+    component:SchedulingUpdateComponent
+  },{
+    path:"scheduling/delete/:id",
+    component:SchedulingDeleteComponent
   }
 ];
 

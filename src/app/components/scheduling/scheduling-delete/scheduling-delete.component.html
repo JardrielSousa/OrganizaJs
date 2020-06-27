@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-title>
+    Deletar Agendamento
+  </mat-card-title>
+  <form class="form"> 
+    <mat-form-field>
+      <input matInput type="date" placeholder="Data" [value]="scheduling.date" name="date" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="time" placeholder="time" [value]="scheduling.time" name="time" disabled>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="deleteScheduling()" color="warn">
+    Deletar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()" >
+    Cancelar
+  </button>
+</mat-card>
+
