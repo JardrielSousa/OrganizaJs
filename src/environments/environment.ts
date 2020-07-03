@@ -5,7 +5,8 @@
 export const environment = {
   production: false ,
   ambiente: 'desenvolvimento',
-  url:'http://localhost:3101/'
+  url:'http://localhost:3101/',
+  apiJava:'http://localhost:8081/v1/usuario/',
 };
 
 /*

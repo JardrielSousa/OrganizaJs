@@ -1,6 +1,7 @@
 .cab{
     display: flex;
     align-items: center;
+    height: 100px;
 }
 .cab a {
     display: flex;
@@ -12,6 +13,7 @@
 .logo {
     height: 70px;
     width: 100px;
+    margin-top: 15px;
 }
 img{
     height: 70px;
@@ -23,3 +25,50 @@ img{
 .cab .title-group i{
     padding-right: 10px;
 }
+
+.cabMin{
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 600px) { 
+    .menu{
+        display: none;
+        display: block;
+        visibility:hidden;
+    }
+    .IconMenu{
+        visibility:visible;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 300px;
+    }
+    .menuMin{
+        display: inline;
+    }
+    .menuMin ul {
+        padding:0px;
+        margin:0px;
+        list-style:none;
+        margin-left:-100px ;
+    }
+    .menuMin ul li { display: inline; }
+    .menuMin ul li a {
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 1000px) { 
+    .menuMin{
+        visibility:hidden;
+    }
+    .IconMenu{
+        visibility:hidden;
+    }
+ }
+
+
+

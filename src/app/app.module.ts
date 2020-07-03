@@ -1,3 +1,4 @@
+import { AuthGuardService } from './guards/auth-guard.service';
 import {MatIconModule} from '@angular/material/icon';
 import { ServiceCrudComponent } from './../app/views/service-crud/service-crud.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -33,7 +34,8 @@ import { SchedulingReadComponent } from './components/scheduling/scheduling-read
 import { SchedulingUpdateComponent } from './components/scheduling/scheduling-update/scheduling-update.component';
 import { SchedulingCreateComponent } from './components/scheduling/scheduling-create/scheduling-create.component';
 import { SchedulingDeleteComponent } from './components/scheduling/scheduling-delete/scheduling-delete.component';
-
+import { AuthComponent } from './auth/auth.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 
 
 registerLocaleData(localePt);
@@ -59,6 +61,8 @@ registerLocaleData(localePt);
     SchedulingUpdateComponent,
     SchedulingCreateComponent,
     SchedulingDeleteComponent,
+    AuthComponent,
+    RegisterUserComponent,
     
   ],
   imports: [
@@ -77,11 +81,11 @@ registerLocaleData(localePt);
     MatFormFieldModule,
     MatTableModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [{
     provide:LOCALE_ID,
-    useValue:'pt-BR'}],
+    useValue:'pt-BR'} , AuthComponent,AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

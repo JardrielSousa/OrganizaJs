@@ -1,3 +1,5 @@
+import { AuthGuardService } from './guards/auth-guard.service';
+import { AuthComponent } from './auth/auth.component';
 import { SchedulingDeleteComponent } from './components/scheduling/scheduling-delete/scheduling-delete.component';
 import { SchedulingUpdateComponent } from './components/scheduling/scheduling-update/scheduling-update.component';
 import { SchedulingCreateComponent } from './components/scheduling/scheduling-create/scheduling-create.component';
@@ -15,47 +17,71 @@ import { ProductsCreateComponent } from './components/products/products-create/p
 import { ProductsDeleteComponent } from './components/products/products-delete/products-delete.component';
 import { ServiceCreateComponent } from './components/service/service-create/service-create.component';
 import { ServiceCrudComponent } from './views/service-crud/service-crud.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
 const routes: Routes = [
   {
-  path: "",
-  component:HomeComponent
+    path: "",
+    component:AuthComponent,
+    
   },{
+    path: "login",
+    component:AuthComponent,
+    
+  },{
+    path: "register",
+    component:RegisterUserComponent,
+    
+  },{
+    path: "home",
+    component:HomeComponent,
+    },{
     path:"products",
-    component:ProductCrudComponent
+    component:ProductCrudComponent,
+    
   },{
     path:"products/create",
-    component:ProductsCreateComponent
+    component:ProductsCreateComponent,
+    
   },{
     path:"products/update/:id",
-    component:ProductsUpdateComponent
+    component:ProductsUpdateComponent,
   },{
     path:"products/delete/:id",
-    component:ProductsDeleteComponent
+    component:ProductsDeleteComponent,
+    
   },{
     path:"service",
-    component:ServiceCrudComponent
+    component:ServiceCrudComponent,
+    
   }
   ,{
     path:"service/create",
-    component:ServiceCreateComponent
+    component:ServiceCreateComponent,
+    
   },{
     path:"service/update/:id",
-    component:ServiceUpdateComponent
+    component:ServiceUpdateComponent,
+    
   },{
     path:"service/delete/:id",
-    component:ServiceDeleteComponent
+    component:ServiceDeleteComponent,
+    
   },{
     path:"scheduling",
-    component:SchedulingCrudComponent
+    component:SchedulingCrudComponent,
+    
   },{
     path:"scheduling/create",
-    component:SchedulingCreateComponent
+    component:SchedulingCreateComponent,
+    
   },{
     path:"scheduling/update/:id",
-    component:SchedulingUpdateComponent
+    component:SchedulingUpdateComponent,
+    
   },{
     path:"scheduling/delete/:id",
-    component:SchedulingDeleteComponent
+    component:SchedulingDeleteComponent,
+    
   }
 ];
 

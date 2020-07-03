@@ -1,3 +1,5 @@
+import { AuthServiceService } from './../../../auth/auth-service.service';
+import { AuthComponent } from './../../../auth/auth.component';
 import { HeaderService } from './header.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabecalhoComponent implements OnInit {
 
-  constructor(private headerService:HeaderService) { }
+  mostrarMenu:boolean = false;
+  default = "cab mat-elevation-z4"
+  constructor(
+    private headerService:HeaderService,
+    private authServiceService:AuthServiceService) { }
 
   ngOnInit() {
+   this.authServiceService.mostrarMenuEmitter.subscribe(
+      mostrar =>{
+        console.log('menu'+mostrar)
+        this.mostrarMenu = mostrar
+      }
+    )
   }
-
+  exibirMenu(){
+   if(this.mostrarMenu){
+    this.mostrarMenu = false;
+   }else{
+    this.mostrarMenu = true;
+   }
+  }
   get title(){
     return this.headerService.headerData.title
   }

@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material';
 
 import { AuthServiceService } from './auth-service.service';
 import { Router } from '@angular/router';
@@ -20,14 +21,46 @@ export class AuthComponent implements OnInit {
   }
     constructor(
       private authService:AuthServiceService,
-      private router : Router
+      private router : Router,
+      private snackBar : MatSnackBar
       ) {                 
                  }
   ngOnInit(): void {
   }
+  /*logar(){
+    console.log('email:'+this.user.email+' pass:'+this.user.pass)
+    this.authService.logar(this.user).subscribe(
+      (user) => {
+        this.authAutenticado = true;
+        this.snackBar.open('Logged Sucessed! Welcome '+user.email,'OK',
+        {duration:2000});
+        this.mostrarMenuEmitter.emit(true);
+        this.router.navigate(['home']);
+      },(err)=>{
+        this.authAutenticado = false;
+        this.snackBar.open('User or Password Incorrect!!');
+        this.mostrarMenuEmitter.emit(false);
+        this.router.navigate(['/']);
+      }
+    )
+  }*/
   logar(){
     console.log('email:'+this.user.email+' pass:'+this.user.pass)
-   this.authService.logar(this.user)
+    if(this.user.email==="root@123" && this.user.pass ==="qwe123"){
+      this.authAutenticado = true;
+      this.mostrarMenuEmitter.emit(true);
+      this.router.navigate(['home']);
+    
+    }else{
+      this.authAutenticado = false;
+      this.mostrarMenuEmitter.emit(false);
+      this.router.navigate(['/']);
+    
+    }
+  }
+
+  criarUsuario(){
+    this.router.navigate(['/register']);
   }
 
 }
