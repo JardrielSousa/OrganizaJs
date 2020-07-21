@@ -13,7 +13,7 @@ export class ProductsService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = `${environment.url}produtos`
+  baseUrl = `${environment.apiJava}produtos`
   
 
   verMsg(msg:string,isError:boolean=false):void{

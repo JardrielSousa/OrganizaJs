@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   ambiente: "produção",
-  url:'"https://organizadbapi.herokuapp.com/v1/'
+  url:'https://organizadbapi.herokuapp.com/v1/'
 };
