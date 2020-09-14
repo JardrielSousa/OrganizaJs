@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CabecalhoComponent } from './components/template/cabecalho/cabecalho.component';
-import {MatToolbarModule, MatCardModule, MatButtonModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import {MatToolbarModule, MatCardModule, MatButtonModule, MatSnackBarModule, MatTableModule, MatPaginatorModule, MatSortModule , MatDatepickerToggle,MatDatepickerModule , MatNativeDateModule } from '@angular/material';
 import {MatListModule} from '@angular/material/list'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import { RodapeComponent } from './components/template/rodape/rodape.component';
@@ -37,6 +37,11 @@ import { SchedulingDeleteComponent } from './components/scheduling/scheduling-de
 import { AuthComponent } from './auth/auth.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
 
+import { SalescreateComponent } from './components/sales/salescreate/salescreate.component';
+import { SalesreadComponent } from './components/sales/salesread/salesread.component';
+import { SalesupdateComponent } from './components/sales/salesupdate/salesupdate.component';
+import { SalesdeleteComponent } from './components/sales/salesdelete/salesdelete.component';
+
 
 registerLocaleData(localePt);
 @NgModule({
@@ -63,6 +68,10 @@ registerLocaleData(localePt);
     SchedulingDeleteComponent,
     AuthComponent,
     RegisterUserComponent,
+    SalescreateComponent,
+    SalesreadComponent,
+    SalesupdateComponent,
+    SalesdeleteComponent,
     
   ],
   imports: [
@@ -82,10 +91,15 @@ registerLocaleData(localePt);
     MatTableModule,
     MatMenuModule,
     MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule 
+  ],
+  exports: [
+    MatDatepickerModule
   ],
   providers: [{
     provide:LOCALE_ID,
-    useValue:'pt-BR'} , AuthComponent,AuthGuardService],
+    useValue:'pt-BR'} , AuthComponent,AuthGuardService,MatDatepickerModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

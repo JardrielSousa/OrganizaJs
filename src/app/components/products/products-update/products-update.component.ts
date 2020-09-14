@@ -13,7 +13,8 @@ export class ProductsUpdateComponent implements OnInit {
 product : Product = {
   nome : '',
   valor : 0.0,
-  quantidade:0
+  quantidade:0,
+  dataCompra:new Date()
 }
   constructor(
     private productsService:ProductsService,

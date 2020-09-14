@@ -13,7 +13,8 @@ export class ProductsCreateComponent implements OnInit {
   product : Product = {
     nome : '',
     valor : 0.0,
-    quantidade:1
+    quantidade:1,
+    dataCompra:new Date()
   }
 
   constructor(private productsService:ProductsService,

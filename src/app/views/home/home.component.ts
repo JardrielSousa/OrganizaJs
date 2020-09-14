@@ -8,6 +8,7 @@ import { HeaderService } from 'src/app/components/template/cabecalho/header.serv
 })
 
 export class HomeComponent implements OnInit {
+  temUsuarioo:boolean;
   items = ITENS;
   constructor(private headerService:HeaderService) {
     headerService.headerData = {
@@ -18,7 +19,17 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.verificaUsuario();
   }
 
+  verificaUsuario(){
+    if(window.localStorage.getItem("user").length>0){
+      console.log('tem usuario')
+      this.temUsuarioo= true;
+    }else{
+      this.temUsuarioo= false;
+      console.log('não tem usuario tem usuario')
+    }
+  }
 }
 const ITENS =['teste','aaaa','pppp']

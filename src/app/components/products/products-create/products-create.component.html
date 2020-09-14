@@ -12,6 +12,13 @@
     <mat-form-field>
       <input matInput type="number" placeholder="Quantidade" [(ngModel)]="product.quantidade" name="quantidade" required>
     </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Data da Compra:</mat-label>
+      <input matInput [matDatepicker]="dataCompra">
+      <mat-datepicker-toggle matSuffix [for]="dataCompra"></mat-datepicker-toggle>
+      <mat-datepicker #dataCompra></mat-datepicker>
+    </mat-form-field>
+    
   </form>
   <button mat-raised-button (click)="createProduct()" color="primary">
     Salvar

@@ -3,4 +3,5 @@ export interface Product{
     nome:string;
     valor:number;
     quantidade:number;
+    dataCompra:Date;
 }

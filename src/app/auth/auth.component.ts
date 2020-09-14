@@ -49,6 +49,7 @@ export class AuthComponent implements OnInit {
     if(this.user.email==="root@123" && this.user.pass ==="qwe123"){
       this.authAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
+      window.localStorage.setItem("user", JSON.stringify(this.user));
       this.router.navigate(['home']);
     
     }else{

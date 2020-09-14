@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="center start" >
+<div *ngIf="temUsuarioo" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="center start" >
   <mat-toolbar color="primary" [ngClass]="default">
   <mat-toolbar-row>
       <span>
@@ -18,7 +18,7 @@
           <div class="col menuInline">
             <ul>
               <li>
-                <a routerLink="/">
+                <a (click)="inicio()">
                   <i class="material-icons">
                     home
                   </i>
@@ -79,7 +79,14 @@
         </i>
         Agendamentos
       </a>
+      <a mat-button (click)="sair()">
+        <i class="material-icons">
+          bush
+        </i>
+        sair
+      </a>
     </div>
     </mat-toolbar-row>
 </mat-toolbar>
 </div>
+
