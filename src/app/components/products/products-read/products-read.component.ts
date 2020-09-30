@@ -18,8 +18,8 @@ export class ProductsReadComponent implements OnInit {
       console.log(products)
     })
   }
-  displayedColumns: string[] = ['id', 'name', 'price','quantity','action'];
-  dataSource = this.products;
+  displayedColumns: string[] = ['id', 'name', 'price','quantity','date','action'];
+  
 
 }
 
