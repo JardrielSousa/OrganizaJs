@@ -1,3 +1,37 @@
-<p>
-  salesdelete works!
-</p>
+<mat-card>
+  <mat-card-title>
+    Deletar Venda
+  </mat-card-title>
+  <form class="form"> 
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="sale.nomeProduto " name="name" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Preço(R$)" [(ngModel)]="sale.valor" name="price" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Quantidade" [(ngModel)]="sale.quantidade" name="quantidade" disabled> 
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>{{sale.dataVenda | date: 'dd/MM/yyyy' }}</mat-label>
+      <input matInput readonly [matDatepicker]="dataVenda" (click)="dataVenda.open()" disabled>
+      <mat-datepicker-toggle  matSuffix [for]="dataVenda" ></mat-datepicker-toggle>
+      <mat-datepicker #dataVenda></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Tamanho" [(ngModel)]="sale.tamanho" name="tamanho" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Pagamento" [(ngModel)]="sale.pagamento" name="pagamento" disabled>
+    </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="deleteSale()" color="warn" >
+    Deletar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()" >
+    Cancelar
+  </button>
+</mat-card>
+
+

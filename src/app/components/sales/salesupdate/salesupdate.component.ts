@@ -12,11 +12,14 @@ export class SalesupdateComponent implements OnInit {
 
   sale : Sale = {
     nomeProduto:'',
-    valor:0.0,
+    valor:0,
     tamanho:'',
     quantidade:0,
+    dataVenda:new Date(),
     pagamento:'',
-    dataVenda:new Date()
+    nomeCliente:'',
+    endereço:'',
+    contato:0
   }
     constructor(
       private salesService:SalesService,

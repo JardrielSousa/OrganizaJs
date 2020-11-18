@@ -6,4 +6,7 @@ export interface Sale{
     quantidade:number;
     dataVenda:Date;
     pagamento:string;
+    nomeCliente:string;
+    endereço:string;
+    contato:number;
 }

@@ -18,7 +18,10 @@ export class SalescreateComponent implements OnInit {
     tamanho:'',
     quantidade:0,
     dataVenda:new Date(),
-    pagamento:''
+    pagamento:'',
+    nomeCliente:'',
+    endereço:'',
+    contato:0
   }
 
   constructor(private salesService:SalesService,
@@ -33,12 +36,7 @@ export class SalescreateComponent implements OnInit {
       this.salesService.create(this.sale).subscribe(()=>{
         this.salesService.verMsg('venda criada!!!');
         this.router.navigate(['/sales']);
-      });
-    else if(this.sale.valor>0)
-      this.salesService.verMsg('sua venda precisa de um preço!!!',true);
-    else if(this.sale.quantidade>0)
-      this.salesService.verMsg('precisa ter pelo menos uma venda no estoque!!!',true);
-    
+      });    
   }
   cancel():void{
     this.router.navigate(['/sales'])
