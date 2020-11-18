@@ -13,7 +13,7 @@ export class SalesService {
 
   constructor(private snackBar:MatSnackBar,  private http:HttpClient) { }
 
-  baseUrl = `${environment.apiJava}vendas`
+  baseUrl = `${environment.url}vendas`
   
 
   verMsg(msg:string,isError:boolean=false):void{
