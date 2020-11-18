@@ -41,6 +41,7 @@ import { SalescreateComponent } from './components/sales/salescreate/salescreate
 import { SalesreadComponent } from './components/sales/salesread/salesread.component';
 import { SalesupdateComponent } from './components/sales/salesupdate/salesupdate.component';
 import { SalesdeleteComponent } from './components/sales/salesdelete/salesdelete.component';
+import { SalesCrudComponent } from './views/sales-crud/sales-crud.component';
 
 
 registerLocaleData(localePt);
@@ -72,6 +73,7 @@ registerLocaleData(localePt);
     SalesreadComponent,
     SalesupdateComponent,
     SalesdeleteComponent,
+    SalesCrudComponent,
     
   ],
   imports: [

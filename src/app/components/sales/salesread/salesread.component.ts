@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Sale } from '../sales.model';
+import { SalesService } from '../sales.service';
 
 @Component({
   selector: 'app-salesread',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SalesreadComponent implements OnInit {
 
-  constructor() { }
+  sales:Sale[]
+  constructor(private salesService:SalesService) { }
 
   ngOnInit() {
+    this.salesService.read().subscribe(sale=>{
+      this.sales = sale
+      console.log(sale)
+    })
   }
-
+  displayedColumns: string[] = ['id', 'nomeProduto', 'valor','tamanho','quantidade','dataVenda','pagamento','action'];
+  
 }

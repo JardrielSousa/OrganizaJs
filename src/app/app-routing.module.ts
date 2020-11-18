@@ -18,10 +18,15 @@ import { ProductsDeleteComponent } from './components/products/products-delete/p
 import { ServiceCreateComponent } from './components/service/service-create/service-create.component';
 import { ServiceCrudComponent } from './views/service-crud/service-crud.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
+import { SalescreateComponent } from './components/sales/salescreate/salescreate.component';
+import { SalesupdateComponent } from './components/sales/salesupdate/salesupdate.component';
+import { SalesdeleteComponent } from './components/sales/salesdelete/salesdelete.component';
+import { SalesCrudComponent } from './views/sales-crud/sales-crud.component';
 const routes: Routes = [
   {
     path: "",
-    component:AuthComponent,
+    redirectTo:'login',
+    pathMatch:'full'
     
   },{
     path: "login",
@@ -82,6 +87,20 @@ const routes: Routes = [
     path:"scheduling/delete/:id",
     component:SchedulingDeleteComponent,
     
+  },{
+    path:"sales",
+    component:SalesCrudComponent,
+    
+  },{
+    path:"sales/create",
+    component:SalescreateComponent,
+    
+  },{
+    path:"sales/update/:id",
+    component:SalesupdateComponent,
+  },{
+    path:"sales/delete/:id",
+    component:SalesdeleteComponent,
   }
 ];
 
