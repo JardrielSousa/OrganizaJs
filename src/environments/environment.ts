@@ -5,8 +5,7 @@
 export const environment = {
   production: false ,
   ambiente: 'desenvolvimento',
-  url:'https://organizadbapi.herokuapp.com/v1/',
-  apiJava:'http://localhost:8080/v1/',
+  url:'http://localhost:8080/v1/',
 };
 
 /*
