@@ -18,7 +18,7 @@ export class SalesupdateComponent implements OnInit {
     dataVenda:new Date(),
     pagamento:'',
     nomeCliente:'',
-    endereço:'',
+    endereco:'',
     contato:0
   }
     constructor(

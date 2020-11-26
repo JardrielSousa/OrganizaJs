@@ -12,17 +12,20 @@
     <mat-form-field>
       <input matInput placeholder="Quantidade" [(ngModel)]="sale.quantidade" name="quantidade">
     </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>{{sale.dataVenda | date: 'dd/MM/yyyy' }}</mat-label>
-      <input matInput readonly [matDatepicker]="dataVenda" (click)="dataVenda.open()">
-      <mat-datepicker-toggle  matSuffix [for]="dataVenda" ></mat-datepicker-toggle>
-      <mat-datepicker #dataVenda></mat-datepicker>
-    </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Tamanho" [(ngModel)]="sale.tamanho" name="tamanho">
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Pagamento" [(ngModel)]="sale.pagamento" name="pagamento">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome do Cliente" [(ngModel)]="sale.nomeCliente" name="nomeCliente">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="endereço" [(ngModel)]="sale.endereco" name="endereco">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Contato" [(ngModel)]="sale.contato" name="Contato">
     </mat-form-field>
   </form>
   <button mat-raised-button (click)="updateSale()" color="warn" >

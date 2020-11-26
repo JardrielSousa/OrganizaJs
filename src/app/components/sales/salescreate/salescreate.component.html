@@ -24,6 +24,15 @@
     <mat-form-field>
       <input matInput placeholder="Pagamento" [(ngModel)]="sale.pagamento" name="pagamento">
     </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome do Cliente" [(ngModel)]="sale.nomeCliente" name="pagamento">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="endereço" [(ngModel)]="sale.endereco" name="endereco">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Contato" [(ngModel)]="sale.contato" name="Contato">
+    </mat-form-field>
   </form>
   <button mat-raised-button (click)="createProduct()" color="primary">
     Salvar

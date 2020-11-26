@@ -18,7 +18,10 @@ export class ProductsReadComponent implements OnInit {
       console.log(products)
     })
   }
-  displayedColumns: string[] = ['id', 'name', 'price','quantity','date','action'];
+  getTotalCost() {
+    return 10
+  }
+  displayedColumns: string[] = ['id', 'name', 'price','priceSale','quantity','date','action'];
   
 
 }

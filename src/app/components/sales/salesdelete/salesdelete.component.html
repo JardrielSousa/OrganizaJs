@@ -24,6 +24,15 @@
     <mat-form-field>
       <input matInput placeholder="Pagamento" [(ngModel)]="sale.pagamento" name="pagamento" disabled>
     </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome do Cliente" [(ngModel)]="sale.nomeCliente" name="pagamento" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="endereço" [(ngModel)]="sale.endereco" name="endereco" disabled>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Contato" [(ngModel)]="sale.contato" name="Contato" disabled>
+    </mat-form-field>
   </form>
   <button mat-raised-button (click)="deleteSale()" color="warn" >
     Deletar

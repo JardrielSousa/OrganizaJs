@@ -10,9 +10,18 @@
       <input matInput placeholder="Preço(R$)" [value]="product.valor" name="price" disabled>
     </mat-form-field>
     <mat-form-field>
+      <input matInput placeholder="valor da venda (R$)" [value]="product.valorVenda" name="priceSale" disabled>
+    </mat-form-field>
+    <mat-form-field>
       <input matInput placeholder="Quantidade" [(ngModel)]="product.quantidade" name="quantidade" disabled>
     </mat-form-field>
-  </form>
+    <mat-form-field appearance="fill" >
+      <mat-label>{{product.dataCompra | date: 'dd/MM/yyyy' }}</mat-label>
+      <input matInput readonly [matDatepicker]="dataCompra" (click)="dataCompra.open()" disabled>
+      <mat-datepicker-toggle matSuffix [for]="dataCompra"></mat-datepicker-toggle>
+      <mat-datepicker #dataCompra></mat-datepicker>
+    </mat-form-field>
+    </form>
   <button mat-raised-button (click)="deleteProduct()" color="warn">
     Deletar
   </button>

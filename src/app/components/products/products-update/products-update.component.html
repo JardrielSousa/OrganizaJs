@@ -10,13 +10,10 @@
       <input matInput placeholder="Preço(R$)" [(ngModel)]="product.valor" name="price" required>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Quantidade" [(ngModel)]="product.quantidade" name="quantidade">
+      <input matInput placeholder="Preço da Venda(R$)" [(ngModel)]="product.valorVenda" name="priceSale" required>
     </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Data da Compra:</mat-label>
-      <input matInput [matDatepicker]="dataCompra">
-      <mat-datepicker-toggle matSuffix [for]="dataCompra"></mat-datepicker-toggle>
-      <mat-datepicker #dataCompra></mat-datepicker>
+    <mat-form-field>
+      <input matInput placeholder="Quantidade" [(ngModel)]="product.quantidade" name="quantidade">
     </mat-form-field>
   </form>
   <button mat-raised-button (click)="updateProduct()" color="warn" >
