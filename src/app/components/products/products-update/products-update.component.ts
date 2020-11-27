@@ -17,6 +17,7 @@ product : Product = {
   quantidade:0,
   dataCompra:new Date()
 }
+minDate = new Date(2000, 0, 1);
   constructor(
     private productsService:ProductsService,
     private router:Router ,

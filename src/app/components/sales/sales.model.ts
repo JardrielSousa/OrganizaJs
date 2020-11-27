@@ -4,7 +4,7 @@ export interface Sale{
     valor:number;
     tamanho:string;
     quantidade:number;
-    dataVenda:Date;
+    dataVenda?:Date;
     pagamento:string;
     nomeCliente:string;
     endereco:string;

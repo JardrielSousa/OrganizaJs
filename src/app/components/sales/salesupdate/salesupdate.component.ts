@@ -15,12 +15,12 @@ export class SalesupdateComponent implements OnInit {
     valor:0,
     tamanho:'',
     quantidade:0,
-    dataVenda:new Date(),
     pagamento:'',
     nomeCliente:'',
     endereco:'',
     contato:0
   }
+  minDate = new Date(2000, 0, 1);
     constructor(
       private salesService:SalesService,
       private router:Router ,

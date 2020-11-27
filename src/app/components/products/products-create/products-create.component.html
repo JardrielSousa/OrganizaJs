@@ -14,7 +14,10 @@
     </mat-form-field>
     <mat-form-field>
       <input matInput type="number" placeholder="Quantidade" [(ngModel)]="product.quantidade" name="quantidade" required>
-    </mat-form-field>   
+    </mat-form-field> 
+    <mat-form-field>
+      <input matInput type="date" [min]="minDate" placeholder="Data da Compra" [(ngModel)]="product.dataCompra" name="data" required>
+    </mat-form-field> 
   </form>
   <button mat-raised-button (click)="createProduct()" color="primary">
     Salvar

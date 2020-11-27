@@ -4,5 +4,5 @@ export interface Product{
     valor:number;
     valorVenda:number;
     quantidade:number;
-    dataCompra:Date;
+    dataCompra?:Date;
 }
