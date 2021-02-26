@@ -14,7 +14,9 @@ export class ProductsReadComponent implements OnInit {
 
   ngOnInit() {
     this.productService.read().subscribe(products=>{
-      this.products = products
+      products.forEach(element => {
+        console.log("e:"+element)
+      });
       console.log(products)
     })
   }
